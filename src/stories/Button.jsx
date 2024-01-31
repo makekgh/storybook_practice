@@ -2,26 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './button.css';
 
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-    const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Button = ({ round, type, size, label, disabled, ...props }) => {
+    const mode = round ? 'btn__round' : '';
     return (
-        <button type="button" className={['storybook-button', `storybook-button--${size}`, mode].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
+        <button type="button" className={['btn', `btn__${size}`, `btn__${type}`, mode].join(' ')} {...props} disabled={disabled}>
             {label}
         </button>
     );
 };
 
 Button.propTypes = {
-    primary: PropTypes.bool,
-    backgroundColor: PropTypes.string,
+    round: PropTypes.bool,
     size: PropTypes.oneOf(['small', 'medium', 'large']),
+    type: PropTypes.oneOf(['user-primary', 'user-secondary', 'user-secondary--stroke', 'user-quaternary', 'user-quaternary--stroke', 'danger', 'success']),
     label: PropTypes.string.isRequired,
-    onClick: PropTypes.func,
+    disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {
-    backgroundColor: null,
-    primary: false,
+    round: false,
     size: 'medium',
-    onClick: undefined,
+    type: 'user-primary',
+    disabled: false,
 };
