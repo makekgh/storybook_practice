@@ -16,20 +16,7 @@ export const LoggedIn = {
         user: {
             name: 'Jane Doe',
         },
-        partner: false,
     },
 };
 
-export const LoggedOut = {
-    // args: {
-    //     partner: false,
-    // },
-};
-export const PartnerLogin = {
-    args: {
-        user: {
-            name: 'Jane Doe',
-        },
-        partner: true,
-    },
-};
+export const LoggedOut = {};

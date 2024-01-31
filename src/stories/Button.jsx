@@ -14,7 +14,21 @@ export const Button = ({ round, type, size, label, disabled, ...props }) => {
 Button.propTypes = {
     round: PropTypes.bool,
     size: PropTypes.oneOf(['small', 'medium', 'large']),
-    type: PropTypes.oneOf(['user-primary', 'user-secondary', 'user-secondary--stroke', 'user-quaternary', 'user-quaternary--stroke', 'danger', 'success']),
+    type: PropTypes.oneOf([
+        'user-primary',
+        'user-secondary',
+        'user-secondary--stroke',
+        'user-tertiary',
+        'user-quaternary',
+        'user-quaternary--stroke',
+        'primary',
+        'ghost',
+        'solid',
+        'tertiary',
+        'outlined',
+        'danger',
+        'success',
+    ]),
     label: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
 };

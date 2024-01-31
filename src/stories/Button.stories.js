@@ -20,31 +20,69 @@ export const UserPrimary = {
     },
 };
 
-export const Secondary = {
+export const userSecondary = {
     args: {
         label: 'Button',
         type: 'user-secondary',
     },
 };
 
-export const SecondaryStroke = {
+export const userSecondaryStroke = {
     args: {
         label: 'Button',
         type: 'user-secondary--stroke',
     },
 };
 
-export const Quaternary = {
+export const userTertiary = {
+    args: {
+        label: 'Button',
+        type: 'user-tertiary',
+    },
+};
+
+export const userQuaternary = {
     args: {
         label: 'Button',
         type: 'user-quaternary',
     },
 };
 
-export const QuaternaryStroke = {
+export const userQuaternaryStroke = {
     args: {
         label: 'Button',
         type: 'user-quaternary--stroke',
+    },
+};
+
+export const Primary = {
+    args: {
+        label: 'Button',
+        type: 'primary',
+    },
+};
+export const Ghost = {
+    args: {
+        label: 'Button',
+        type: 'ghost',
+    },
+};
+export const solid = {
+    args: {
+        label: 'Button',
+        type: 'solid',
+    },
+};
+export const tertiary = {
+    args: {
+        label: 'Button',
+        type: 'tertiary',
+    },
+};
+export const outlined = {
+    args: {
+        label: 'Button',
+        type: 'outlined',
     },
 };
 
