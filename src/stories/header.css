@@ -3,6 +3,26 @@
 --------------------- */
 a {
     text-decoration: none;
+    color: inherit;
+}
+
+address,
+aside,
+div,
+img,
+li,
+main,
+nav,
+ol,
+p,
+span,
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: middle;
+    -webkit-text-size-adjust: none;
+    list-style: none;
 }
 
 .header {
@@ -316,6 +336,7 @@ a {
     padding: 16px;
 }
 .mypage__profile {
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -346,6 +367,7 @@ a {
     color: #8c8c8c;
     font-size: 13px;
     line-height: 16px;
+    text-align: left;
 }
 .mypage .user-img {
     width: 38px;
@@ -375,9 +397,9 @@ a {
 }
 .mypage .new-icon {
     display: block;
-    height: 18px;
+    height: 14px;
     margin-left: 8px;
-    padding: 2px 6px;
+    padding: 2px 8px;
     color: #ffffff;
     font-size: 13px;
     line-height: 14px;

@@ -1,0 +1,271 @@
+input {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+textarea {
+    box-sizing: border-box;
+    resize: none;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+select {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    border-width: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-position: center right 8px;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none'%3E%3Cpath fill='%23434343' d='m11.468 8.783-1.943 1.942a.747.747 0 0 1-1.057 0L6.525 8.783C6.053 8.31 6.39 7.5 7.058 7.5h3.885c.667 0 .997.81.525 1.283Z'/%3E%3C/svg%3E");
+}
+select.disabled,
+select:disabled {
+    opacity: 1;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none'%3E%3Cpath fill='%238C8C8C' d='m11.468 8.783-1.943 1.942a.747.747 0 0 1-1.057 0L6.525 8.783C6.053 8.31 6.39 7.5 7.058 7.5h3.885c.667 0 .997.81.525 1.283Z'/%3E%3C/svg%3E");
+}
+select::-ms-expand {
+    display: none;
+}
+
+/*---------------------
+--- 인풋 박스 디자인
+--------------------- */
+input,
+select {
+    padding: 8px 16px;
+    font-size: 15px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: border 0.2s;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+input::placeholder,
+select::placeholder {
+    color: #bfbfbf;
+}
+input.disabled,
+input:disabled,
+select.disabled,
+select:disabled {
+    color: rgba(140, 140, 140, 0.7);
+    border: 1px solid #d9d9d9 !important;
+    background-color: #f5f5f5;
+    cursor: default;
+}
+input:focus,
+input:active,
+select:focus,
+select:active {
+    border: 1px solid #8852e0;
+}
+
+input.readonly,
+input:read-only {
+    border: 1px solid #d9d9d9 !important;
+    background-color: #f5f5f5;
+    cursor: default;
+}
+
+select {
+    padding-right: 30px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%23595959' fill-rule='evenodd' d='M14.77 7.21a.75.75 0 0 0-1.06.02L10 11.168 6.29 7.23a.75.75 0 1 0-1.08 1.04l4.25 4.5a.75.75 0 0 0 1.08 0l4.25-4.5a.75.75 0 0 0-.02-1.06Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+select:disabled,
+select.disabled {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%238C8C8C' fill-rule='evenodd' d='M14.77 7.21a.75.75 0 0 0-1.06.02L10 11.168 6.29 7.23a.75.75 0 1 0-1.08 1.04l4.25 4.5a.75.75 0 0 0 1.08 0l4.25-4.5a.75.75 0 0 0-.02-1.06Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+select.readonly {
+    color: #262626;
+    border: 1px solid #f0f0f0 !important;
+    background-color: #f5f5f5;
+    cursor: default;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%238C8C8C' fill-rule='evenodd' d='M14.77 7.21a.75.75 0 0 0-1.06.02L10 11.168 6.29 7.23a.75.75 0 1 0-1.08 1.04l4.25 4.5a.75.75 0 0 0 1.08 0l4.25-4.5a.75.75 0 0 0-.02-1.06Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+textarea {
+    font-size: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.45;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    border: none;
+    resize: none;
+}
+textarea::placeholder {
+    color: #bfbfbf;
+}
+textarea::-webkit-scrollbar {
+    width: 6px;
+}
+
+/*---------------------
+--- text field 
+--- input, label, help text
+--------------------- */
+.textfield {
+    width: 100%;
+}
+.textfield .label {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 4px;
+    color: #434343;
+    font-size: 14px;
+    font-weight: 600;
+}
+.textfield input {
+    min-height: 40px;
+    font-size: 16px;
+    flex: 1;
+}
+.textfield .time-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.textfield .time-wrap.hide {
+    display: none;
+}
+.textfield .help-text {
+    margin-top: 4px;
+    color: #8c8c8c;
+    line-height: 1.23;
+}
+.textfield.error .help-text {
+    color: #f90000;
+}
+.textfield.success .help-text {
+    color: #29cc6a;
+}
+.textfield input.error {
+    border: 1px solid rgba(249, 0, 0, 0.55);
+}
+.textfield input.success {
+    border: 1px solid rgba(41, 204, 106, 0.55);
+}
+.textfield input.success-icon {
+    padding-right: 32px;
+    color: #262626;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%2329CC6A' d='m8.75 11.167 4.084-4.084a.79.79 0 0 1 .583-.229.79.79 0 0 1 .584.23.79.79 0 0 1 .229.583.79.79 0 0 1-.23.583l-4.666 4.667a.8.8 0 0 1-.583.25.8.8 0 0 1-.584-.25L6.001 10.75a.79.79 0 0 1-.23-.583.79.79 0 0 1 .23-.584.79.79 0 0 1 .583-.229.79.79 0 0 1 .583.23l1.584 1.583Z'/%3E%3C/svg%3E");
+    background-position: right 8px center;
+    background-color: #ffffff;
+    border-color: #d9d9d9 !important;
+}
+.textfield input.disedit {
+    color: #262626 !important;
+    background-color: #f5f5f5;
+    cursor: default;
+}
+.textfield.disedit {
+    color: #262626 !important;
+    background-color: #f5f5f5;
+    cursor: default;
+}
+.textfield.disedit input.disedit {
+    color: #262626 !important;
+    background-color: #f5f5f5;
+    cursor: default;
+}
+
+/*---------------------
+--- 인풋 라벨
+--------------------- */
+.label {
+    position: relative;
+    display: inline-block;
+    color: #434343;
+    font-size: 14px;
+    font-weight: 500;
+}
+.label.disabled {
+    color: #bfbfbf;
+}
+.label.required {
+    padding-right: 12px;
+}
+.label.required::after {
+    content: '*';
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    color: #ff4d4f;
+}
+
+/*---------------------
+--- 인풋 아이콘
+--------------------- */
+.input-icon.front {
+    padding-left: 40px;
+    background-repeat: no-repeat;
+    background-position: center left 12px;
+}
+.input-icon.back {
+    padding-right: 40px;
+    background-repeat: no-repeat;
+    background-position: center right 12px;
+}
+
+/*---------------------
+--- 인풋영역 도움말 (Help text)
+--------------------- */
+.help-text {
+    display: block;
+    margin-top: 2px;
+    color: #8c8c8c;
+    font-size: 13px;
+}
+.help-text.hide {
+    display: none;
+}
+.help-text.error {
+    color: #f90000;
+}
+.help-text.error-icon {
+    padding-left: 20px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none'%3E%3Cpath stroke='%23F90000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M9 6.75v2.813M15.75 9a6.75 6.75 0 1 1-13.5 0 6.75 6.75 0 0 1 13.5 0ZM9 11.813h.006v.005H9v-.005Z'/%3E%3C/svg%3E");
+    background-position: left center;
+}
+.help-text.success {
+    color: #29cc6a;
+}
+.help-text.success-icon {
+    padding-left: 20px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%2329CC6A' d='m8.75 11.167 4.084-4.084a.79.79 0 0 1 .583-.229.79.79 0 0 1 .584.23.79.79 0 0 1 .229.583.79.79 0 0 1-.23.583l-4.666 4.667a.8.8 0 0 1-.583.25.8.8 0 0 1-.584-.25L6.001 10.75a.79.79 0 0 1-.23-.583.79.79 0 0 1 .23-.584.79.79 0 0 1 .583-.229.79.79 0 0 1 .583.23l1.584 1.583Z'/%3E%3C/svg%3E");
+    background-position: left center;
+}
+.help-text.time {
+    margin-left: 16px;
+    color: #ff7009;
+}
