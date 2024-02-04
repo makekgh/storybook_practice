@@ -7,6 +7,27 @@ import './header.css';
 import logo from './assets/logo.svg';
 import icon from './assets/profile-default.svg';
 
+const menuList = [
+    {
+        id: 1,
+        title: '내 발주 현황',
+        newItem: true,
+        url: '',
+    },
+    {
+        id: 2,
+        title: '진행중인 거래',
+        newItem: true,
+        url: '',
+    },
+    {
+        id: 3,
+        title: '자주가는 공장',
+        newItem: false,
+        url: '',
+    },
+];
+
 export const MyProfile = ({ user, bedge }) => (
     <header className="header">
         <div className="contents">
@@ -34,31 +55,20 @@ export const MyProfile = ({ user, bedge }) => (
                                             </div>
                                         </button>
                                         <ul className="mypage__link">
-                                            <li>
-                                                <button className="mypage__link--item">
-                                                    <span>내 발주 현황</span>
-                                                    <span className="new-icon">N</span>
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button className="mypage__link--item">
-                                                    <span>진행중인 거래</span>
-                                                    <span className="new-icon">N</span>
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button className="mypage__link--item">
-                                                    <span>자주가는 공장</span>
-                                                </button>
-                                            </li>
+                                            {menuList.map((menu) => (
+                                                <li>
+                                                    <button className="mypage__link--item">
+                                                        <span>{menu.title}</span>
+                                                        {menu.newItem && <span className="new-icon">N</span>}
+                                                    </button>
+                                                </li>
+                                            ))}
                                         </ul>
-                                        {bedge === 'partner' ? (
+                                        {bedge === 'partner' && (
                                             <button className="page-change">
                                                 <span className="icon"></span>
                                                 <span className="page-change__text">파트너로 전환</span>
                                             </button>
-                                        ) : (
-                                            ''
                                         )}
                                     </div>
                                     <button className="logout">로그아웃</button>
@@ -87,6 +97,8 @@ export const MyProfile = ({ user, bedge }) => (
         </div>
     </header>
 );
+
+const active = () => {};
 
 MyProfile.propTypes = {
     user: PropTypes.shape({

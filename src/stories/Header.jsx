@@ -39,9 +39,7 @@ export const Header = ({ user, partner }) => (
                     <button className="gnb__item is-active">이용안내</button>
                 </nav>
 
-                {partner ? (
-                    ''
-                ) : (
+                {!partner && (
                     <div className="partner-link">
                         <span className="partner-link__text">견적을 수주받고 싶으세요?</span>
                         <Button size="small" round type="user-tertiary" label="파트너가입"></Button>
