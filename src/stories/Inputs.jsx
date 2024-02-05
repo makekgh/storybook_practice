@@ -9,11 +9,11 @@ export const Input = ({ inputStatus, labelRequired, labelDisabled, labelText, su
     const iconSuccess = successIcon ? 'success-icon' : '';
 
     return (
-        <div className={`textfield ${inputStatus}`} style={{ width: 240, padding: 40 }}>
+        <div className={`textfield ${inputStatus}`} style={{ width: 240 }}>
             <label htmlFor="" className={`label ${requiredLabel} ${disabledLabel}`}>
                 {labelText}
             </label>
-            <input type="text" className={`${inputStatus} ${iconSuccess}`} placeholder={placeholder} value={value} readOnly={readonly} disabled={disabled} />
+            <input type="text" className={`${inputStatus} ${iconSuccess}`} placeholder={placeholder} defaultValue={value} readOnly={readonly} disabled={disabled} />
             <span className={`help-text ${inputStatus}`}>{helpText}</span>
         </div>
     );
@@ -26,7 +26,7 @@ Input.propTypes = {
     labelText: PropTypes.string,
     successIcon: PropTypes.bool,
     placeholder: PropTypes.string,
-    value: PropTypes.string,
+    defaultValue: PropTypes.string,
     readonly: PropTypes.bool,
     disabled: PropTypes.bool,
     helpText: PropTypes.string,

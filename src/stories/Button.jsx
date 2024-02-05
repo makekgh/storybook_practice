@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './button.css';
 
-export const Button = ({ round, type, size, label, disabled, ...props }) => {
+export const Button = ({ round, type, size, label, btnDisabled, ...props }) => {
     const mode = round ? 'btn__round' : '';
     return (
-        <button type="button" className={['btn', `btn__${size}`, `btn__${type}`, mode].join(' ')} {...props} disabled={disabled}>
+        <button type="button" className={['btn', `btn__${size}`, `btn__${type}`, mode].join(' ')} {...props} disabled={btnDisabled}>
             {label}
         </button>
     );

@@ -9,22 +9,16 @@ import icon from './assets/profile-default.svg';
 
 const menuList = [
     {
-        id: 1,
         title: '내 발주 현황',
         newItem: true,
-        url: '',
     },
     {
-        id: 2,
         title: '진행중인 거래',
         newItem: true,
-        url: '',
     },
     {
-        id: 3,
         title: '자주가는 공장',
         newItem: false,
-        url: '',
     },
 ];
 
@@ -97,8 +91,6 @@ export const MyProfile = ({ user, bedge }) => (
         </div>
     </header>
 );
-
-const active = () => {};
 
 MyProfile.propTypes = {
     user: PropTypes.shape({

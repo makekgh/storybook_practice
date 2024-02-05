@@ -1,0 +1,218 @@
+/*---------------------
+--- 팝업창
+--------------------- */
+.popup .layer {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1200;
+    display: none;
+}
+.popup__wrap {
+    width: 360px;
+    padding: 24px 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 12px 20px 0px rgba(14, 31, 53, 0.06), 0px 6px 12px 0px rgba(14, 31, 53, 0.08), 0px 2px 4px 0px rgba(14, 31, 53, 0.06);
+    z-index: 1300;
+    display: none;
+}
+.popup.show .layer {
+    display: block;
+}
+.popup.show .popup__wrap {
+    display: block;
+    animation: popup 0.2s cubic-bezier(0, 0, 0.36, 1.11) 0.1s both;
+}
+.popup.show .popup__wrap.hide {
+    display: none;
+}
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+}
+.popup__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+.popup__text {
+    color: #8c8c8c;
+    font-size: 14px;
+}
+.popup .btn-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
+}
+.popup .btn-box .btn {
+    flex: 1;
+}
+.popup .btn-box .btn + .btn {
+    margin: unset;
+}
+.popup .btn-box .btn__small.btn__tertiary {
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+/*---------------------
+--- 시스템 팜업
+--------------------- */
+.popup.system .system__icon {
+    width: 56px;
+    height: 56px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background-image: url('../images/ico-system_alert.svg'); */
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.popup.system__success .popup__title {
+    color: #29cc6a;
+}
+.popup.system__warning .system__icon {
+    background-position: center;
+}
+.popup.system__warning .popup__title {
+    color: #f0d500;
+}
+.popup.system__danger .system__icon {
+    background-position: bottom;
+}
+.popup.system__danger .popup__title {
+    color: #f90000;
+}
+
+/*---------------------
+--- snackbar
+--------------------- */
+.snackbar {
+    min-width: 320px;
+    height: 48px;
+    position: fixed;
+    left: 40px;
+    bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 4px;
+    background-color: #1f1f1f;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    display: none;
+}
+.snackbar.show {
+    animation: snackbarOpen 0.5s cubic-bezier(0, 0, 0.36, 1.11) 0.2s both;
+}
+.snackbar.hide {
+    animation: snackbarClose 0.2s cubic-bezier(0, 0, 0.36, 1.11) both;
+}
+@keyframes snackbarOpen {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes snackbarClose {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+}
+.snackbar__message {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 22px;
+}
+.snackbar__close {
+    padding: 6px 16px;
+    color: #ff7009;
+    font-weight: 600;
+}
+.snackbar__close--icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    padding: 0;
+    text-indent: -9999px;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%23FFFFFF' d='M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z'/%3E%3C/svg%3E");
+}
+
+/*---------------------
+--- snackbar system popup
+--------------------- */
+.snackbar-system {
+    min-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0px 6px 12px 0px rgba(14, 31, 53, 0.08), 0px 4px 8px 0px rgba(14, 31, 53, 0.1), 0px 1px 4px 0px rgba(14, 31, 53, 0.12);
+}
+.snackbar-system .icon {
+    width: 42px;
+    height: 42px;
+    background-size: 100%;
+    /* background-image: url('../images/ico-system_alert.svg'); */
+    background-repeat: no-repeat;
+}
+.snackbar-system .text-box {
+    flex: 1;
+    padding: 0 10px;
+}
+.snackbar-system.success .icon {
+    background-position: top;
+}
+.snackbar-system.success .popup__title {
+    color: #29cc6a;
+    line-height: 30px;
+}
+.snackbar-system.success .popup__text {
+    line-height: 20px;
+}
+.snackbar-system.warning .icon {
+    background-position: center;
+}
+.snackbar-system.warning .popup__title {
+    color: #f0d500;
+}
+.snackbar-system.danger .icon {
+    background-position: bottom;
+}
+.snackbar-system.danger .popup__title {
+    color: #ff4d4f;
+}
+.snackbar-system .snackbar__close {
+    align-self: flex-start;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%23000000' d='M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z'/%3E%3C/svg%3E");
+}

@@ -269,3 +269,355 @@ textarea::-webkit-scrollbar {
     margin-left: 16px;
     color: #ff7009;
 }
+
+/*---------------------
+--- Search field
+--------------------- */
+input[type='text'].search-field {
+    min-height: 48px;
+    padding: 12px 16px 12px 44px;
+    font-size: 16px;
+    /* background-image: url('../images/ico-search.svg'); */
+    background-repeat: no-repeat;
+    background-position: center left 16px;
+    border-radius: 8px;
+}
+input[type='text'].search-field__round {
+    border-radius: 100px;
+}
+
+/*---------------------
+--- 커스텀 필드
+--- 업로드, 다운로드, 링크
+--------------------- */
+.field-custom {
+    max-width: 216px;
+    height: 36px;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: border 0.2s;
+}
+.field-custom__text {
+    flex: 1;
+    margin: 0 6px;
+    color: #1890ff;
+    text-decoration: underline;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+}
+.field-custom__text:hover {
+    opacity: 0.75;
+    transition: 0.2s;
+}
+.field-custom__icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 6px;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.field-custom__icon.upload {
+    /* background-image: url('../images/ico-upload.svg'); */
+}
+.field-custom__icon.download {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3E%3Cpath fill='%23000000' d='M8.75.75a.75.75 0 0 0-1.5 0v8.614L4.295 6.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.751.751 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03L8.75 9.364V.75Z'/%3E%3Cpath fill='%23000000' d='M1.5 10.75a.75.75 0 1 0-1.5 0v2.5A2.75 2.75 0 0 0 2.75 16h10.5A2.75 2.75 0 0 0 16 13.25v-2.5a.75.75 0 1 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H2.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z'/%3E%3C/svg%3E");
+}
+.field-custom__icon.link {
+    /* background-image: url('../images/ico-link.svg'); */
+}
+
+/*---------------------
+--- 비밀번호 폼
+--------------------- */
+.pw-form {
+    position: relative;
+    height: 40px;
+}
+.pw-form input {
+    position: absolute;
+    padding-right: 44px;
+}
+.pw-form__eye-btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    font-size: 0;
+    /* background-image: url('../images/ico-eye.svg'); */
+}
+.pw-form__eye-btn.invisible {
+    background-position: bottom;
+}
+
+/*---------------------
+--- 버튼 폼
+--------------------- */
+.btn-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: border-color 0.2s;
+}
+
+.btn-form.default {
+    border: 1px solid #d9d9d9;
+}
+
+.btn-form.active {
+    border: 1px solid #8852ff;
+}
+
+.btn-form input {
+    padding-right: 0;
+    border: none !important;
+    border-radius: 0;
+    background-color: transparent;
+}
+.btn-form__btn {
+    padding: 4px 16px;
+    margin-right: 8px;
+    color: #6a27d8;
+}
+.btn-form__btn:hover {
+    background-color: #f5f5f5;
+}
+.btn-form__btn.disabled,
+.btn-form__btn:disabled {
+    color: #bfbfbf;
+    background-color: #ffffff !important;
+    cursor: default;
+}
+.btn-form.error {
+    border: 1px solid #f90000;
+}
+.btn-form.error input {
+    border: none;
+}
+.btn-form.success-icon input.success-icon {
+    background-color: transparent;
+    border: none !important;
+}
+.btn-form.success-icon .btn-form__btn {
+    display: none;
+}
+
+/*---------------------
+--- 모달 폼
+--------------------- */
+.modal-form input {
+    cursor: pointer;
+}
+.modal-form input:read-only,
+.modal-form input.readonly {
+    color: #262626;
+    background-color: #ffffff;
+}
+.modal-form input:hover {
+    background-color: #fafafa;
+    transition: 0.2s;
+}
+.modal-form input:disabled,
+.modal-form input.disabled {
+    color: rgba(140, 140, 140, 0.7);
+    background-color: #f5f5f5;
+    cursor: default;
+}
+.modal-form button {
+    width: 100%;
+    padding: 8px 40px 8px 16px;
+    font-size: 15px;
+    text-align: left;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%23595959' fill-rule='evenodd' d='M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center right 12px;
+    transition: border 0.2s;
+}
+.modal-form button.before-select {
+    color: #bfbfbf;
+}
+.modal-form button:focus,
+.modal-form button:active {
+    border: 1px solid #8852e0;
+}
+.modal-form button:hover {
+    background-color: #fafafa;
+    transition: 0.2s;
+}
+.modal-form button:disabled,
+.modal-form button.disabled {
+    color: rgba(140, 140, 140, 0.7);
+    background-color: #f5f5f5;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%23BFBFBF' fill-rule='evenodd' d='M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    cursor: default;
+}
+.modal-form button:disabled:focus,
+.modal-form button:disabled:active,
+.modal-form button.disabled:focus,
+.modal-form button.disabled:active {
+    border-color: #d9d9d9;
+}
+
+/*---------------------
+--- 파일 첨부 폼
+--------------------- */
+.attach-form {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 15px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: border 0.2s;
+}
+.attach-form:hover {
+    background-color: #fafafa;
+    transition: 0.2s;
+}
+.attach-form.disabled,
+.attach-form:disabled {
+    color: rgba(140, 140, 140, 0.7);
+    border: 1px solid #d9d9d9 !important;
+    background-color: #f5f5f5;
+    cursor: default;
+}
+.attach-form.disabled::before,
+.attach-form:disabled::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='20' fill='none'%3E%3Cpath stroke='%23BFBFBF' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M5.5 10.833h5m-5 3.334H8M1.335 3.333v13.334a1.666 1.666 0 0 0 1.667 1.666h10a1.667 1.667 0 0 0 1.666-1.666V6.952a1.665 1.665 0 0 0-.501-1.192l-3.7-3.618A1.667 1.667 0 0 0 9.3 1.667H3a1.667 1.667 0 0 0-1.667 1.666Z'/%3E%3Cpath stroke='%23BFBFBF' stroke-linejoin='round' stroke-width='1.5' d='M9.668 1.667V5a1.667 1.667 0 0 0 1.667 1.667h3.333'/%3E%3C/svg%3E");
+}
+.attach-form.disabled .attach-form__btn,
+.attach-form:disabled .attach-form__btn {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%23BFBFBF' d='M10.75 4.75a.75.75 0 1 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 1 0 1.5 0v-4.5h4.5a.75.75 0 1 0 0-1.5h-4.5v-4.5Z'/%3E%3C/svg%3E");
+}
+.attach-form:focus,
+.attach-form:active {
+    border: 1px solid #8852e0;
+}
+.attach-form::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='20' fill='none'%3E%3Cpath stroke='%238C8C8C' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M5.5 10.833h5m-5 3.334H8M1.335 3.333v13.334a1.666 1.666 0 0 0 1.667 1.666h10a1.667 1.667 0 0 0 1.666-1.666V6.952a1.665 1.665 0 0 0-.501-1.192l-3.7-3.618A1.667 1.667 0 0 0 9.3 1.667H3a1.667 1.667 0 0 0-1.667 1.666Z'/%3E%3Cpath stroke='%238C8C8C' stroke-linejoin='round' stroke-width='1.5' d='M9.668 1.667V5a1.667 1.667 0 0 0 1.667 1.667h3.333'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.attach-form__filename {
+    flex: 1;
+    text-align: left;
+    color: #8c8c8c;
+}
+.attach-form__btn {
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%23595959' d='M10.75 4.75a.75.75 0 1 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 1 0 1.5 0v-4.5h4.5a.75.75 0 1 0 0-1.5h-4.5v-4.5Z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.attach-form.selected .attach-form__filename {
+    color: #262626;
+    text-decoration: underline;
+}
+.attach-form.selected .attach-form__btn {
+    /* background-image: url('../images/ico-delete.svg'); */
+}
+
+/*---------------------
+--- URL 폼
+--------------------- */
+.url-form {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background-color: #fafafa;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+}
+.url-form .url {
+    margin-right: 8px;
+    color: #595959;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.2px;
+}
+
+/*---------------------
+--- 텍스트 폼 
+--------------------- */
+.text-form {
+    position: relative;
+    padding: 16px 8px 22px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: border 0.2s;
+}
+.text-form.disabled {
+    color: rgba(140, 140, 140, 0.7);
+    border: 1px solid #d9d9d9 !important;
+    background-color: #f5f5f5;
+    cursor: default;
+}
+.text-form:focus-within {
+    border: 1px solid #8852e0;
+}
+.text-form .textarea {
+    height: 100%;
+    min-height: 140px;
+    padding-right: 8px;
+}
+.text-form .num {
+    position: absolute;
+    right: 12px;
+    bottom: 0;
+    text-align: right;
+    font-size: 14px;
+}
+.text-form .num * {
+    color: #8c8c8c;
+    font-size: 13px;
+}
+
+/*-------------------------------
+--- checkbox 포함한 라벨 (회원가입)
+-------------------------------- */
+.check-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+.check-label .label {
+    margin-bottom: 0;
+}
+
+/*---------------------
+--- input type=number 화살표 삭제
+--------------------- */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
