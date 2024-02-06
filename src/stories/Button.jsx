@@ -38,4 +38,5 @@ Button.defaultProps = {
     size: 'medium',
     type: 'user-primary',
     disabled: false,
+    label: 'Button',
 };
