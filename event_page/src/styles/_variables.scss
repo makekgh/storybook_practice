@@ -1,0 +1,133 @@
+$font: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+
+$c-brand-01: #e1d4f7;
+$c-brand-02: #c3a8f0;
+$c-brand-04: #8852e0;
+$c-brand-06: #401782;
+$c-primary-dark: #401782;
+$c-white: #ffffff;
+$c-fa: #fafafa;
+$c-26: #262626;
+$c-f5: #f5f5f5;
+$c-bf: #bfbfbf;
+$c-8c: #8c8c8c;
+$c-43: #434343;
+
+@mixin mobs {
+    @media (max-width: 780px) {
+        @content;
+    }
+}
+
+@mixin pseudo($content, $width, $height) {
+    content: $content;
+    display: block;
+    width: $width;
+    height: $height;
+}
+
+@mixin positionCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin shadowSm03 {
+    box-shadow: 0px 4px 8px 0px rgba(14, 31, 53, 0.08), 0px 1px 4px 0px rgba(14, 31, 53, 0.12);
+}
+
+@mixin scrollbar($size) {
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+
+    &::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $c-bf;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $c-fa;
+    }
+
+    &::-webkit-scrollbar-button:start:decrement,
+    &::-webkit-scrollbar-button:end:increment {
+        display: none !important;
+        width: 0;
+        height: 0;
+    }
+}
+
+.mob-hide {
+    @include mobs {
+        display: none;
+    }
+}
+
+.pc-hide {
+    display: none;
+
+    @include mobs {
+        display: block;
+    }
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.error-icon {
+    $size: 22px;
+    $iconColor: 595959;
+
+    display: inline-block;
+    width: $size;
+    height: $size;
+    position: relative;
+    top: -2px;
+    margin-right: 8px;
+    font-size: 0 !important;
+    background-size: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none'%3E%3Cpath stroke='%23#{$iconColor}' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M9 6.75v2.813M15.75 9a6.75 6.75 0 1 1-13.5 0 6.75 6.75 0 0 1 13.5 0ZM9 11.813h.006v.005H9v-.005Z'/%3E%3C/svg%3E");
+
+    @include mobs {
+        $size: 16px;
+
+        width: $size;
+        height: $size;
+        top: 0;
+        margin-right: 6px;
+    }
+}
+
+.check-icon {
+    $iconColor: 303030;
+    $size: 24px;
+
+    display: inline-block;
+    width: $size;
+    height: $size;
+    position: relative;
+    top: -4px;
+    margin-right: 8px;
+    font-size: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath fill='%23#{$iconColor}' d='m21.796 7.546-12 12a1.125 1.125 0 0 1-1.594 0l-5.25-5.25a1.128 1.128 0 0 1 1.594-1.594L9 17.156 20.204 5.954a1.127 1.127 0 0 1 1.594 1.594l-.002-.002Z'/%3E%3C/svg%3E");
+    background-size: 100%;
+
+    @include mobs {
+        $size: 18px;
+
+        width: $size;
+        height: $size;
+        top: -3px;
+    }
+}

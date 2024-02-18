@@ -1,0 +1,243 @@
+@import './variables';
+
+@font-face {
+    font-family: 'Pretendard Variable';
+    font-weight: 45 920;
+    font-style: normal;
+    font-display: swap;
+    src: url('./../assets/font/PretendardVariable.woff2') format('woff2-variations');
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: $font;
+    font-style: normal;
+    font-weight: 500;
+    color: $c-26;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+img,
+small article,
+aside,
+footer,
+header,
+nav,
+address,
+section,
+main,
+time,
+ol,
+ul,
+li,
+hr,
+strong,
+figure,
+tr,
+th,
+td,
+dl,
+dt,
+dd,
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: middle;
+    -webkit-text-size-adjust: none;
+    font-family: $font;
+    font-style: normal;
+    font-weight: 500;
+    color: $c-26;
+}
+
+ul,
+ol,
+li,
+dl {
+    list-style: none;
+}
+
+br {
+    font-family: dotum;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button:disabled,
+button[disabled] {
+    -webkit-tap-highlight-color: transparent;
+    color: inherit;
+    cursor: default;
+    transition: none;
+}
+
+hr {
+    display: none;
+}
+
+button {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: $font;
+    font-size: 100%;
+    line-height: 1.6;
+    background: none;
+    cursor: pointer;
+
+    box-sizing: border-box !important;
+}
+
+i {
+    font-style: normal;
+}
+
+a,
+area,
+button,
+[role='button'],
+input:not([type='range']),
+label,
+select,
+summary,
+textarea {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    outline: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption,
+legend {
+    padding: 0;
+    font-size: 0;
+    text-indent: -9999px;
+}
+
+th {
+    text-align: inherit;
+}
+
+input {
+    font-family: $font;
+    vertical-align: middle;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+textarea {
+    box-sizing: border-box;
+    resize: none;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+select {
+    font-family: $font;
+    border-width: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-position: center right 8px;
+    background-repeat: no-repeat;
+    background-image: icon(selectboxArrow, '434343');
+
+    &.disabled,
+    &:disabled {
+        opacity: 1;
+        background-image: icon(selectboxArrow, '8C8C8C');
+    }
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+html {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 100%;
+}
+
+body {
+    // height: calc(100% - #{$h-header});
+    // min-height: calc(100% - #{$h-header});
+    height: 100%;
+    position: relative;
+    font-family: $font;
+    text-align: left;
+    font-size: 100%;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+}
+
+html,
+body,
+div,
+textarea {
+    @include scrollbar(8px);
+}
+
+.text-hide {
+    font-size: 0;
+    text-indent: -9999px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.visibility-hidden {
+    visibility: hidden !important;
+}
+
+/* 스크립트 개행을 위한 클래스 */
+.pre-wrap {
+    white-space: pre-wrap !important;
+}

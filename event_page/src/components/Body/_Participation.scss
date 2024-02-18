@@ -1,0 +1,205 @@
+@import './../../styles/variables';
+
+.participation {
+    margin-top: 140px;
+    border-radius: 32px;
+    box-shadow: 0px 1px 20px rgba($color: #180930, $alpha: 0.15);
+    overflow: hidden;
+
+    @include mobs {
+        margin-top: 56px;
+        border-radius: 24px;
+    }
+
+    &__title {
+        padding: 24px;
+        color: $c-white;
+        font-size: 28px;
+        text-align: center;
+        background-color: $c-primary-dark;
+
+        @include mobs {
+            padding: 8px;
+            font-size: 18px;
+        }
+    }
+
+    &__cont {
+        padding: 32px 80px;
+
+        @include mobs {
+            padding: 24px 16px;
+        }
+
+        .info__detail--text {
+            text-align: center;
+            line-height: 1.4;
+
+            @include mobs {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    margin: 80px auto;
+
+    @include mobs {
+        margin: 52px auto 0;
+    }
+
+    &__wrap {
+        display: flex;
+
+        & + .timeline__wrap {
+            margin-top: 12px;
+        }
+    }
+
+    &__box {
+        flex: 1;
+        line-height: 1.2;
+
+        &--text {
+            display: flex;
+
+            @include mobs {
+                flex-direction: column;
+            }
+        }
+
+        .num {
+            width: 90px;
+            height: fit-content;
+            margin-right: 16px;
+            padding: 4px 16px;
+            color: $c-brand-04;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            border: 1px solid $c-brand-04;
+            border-radius: 100px;
+
+            @include mobs {
+                width: 78px;
+                font-size: 12px;
+            }
+        }
+
+        .desc {
+            flex: 1;
+            font-size: 22px;
+
+            @include mobs {
+                margin-top: 16px;
+                font-size: 14px;
+            }
+
+            .done {
+                margin-left: 16px;
+                font-size: 24px;
+                font-weight: 600;
+
+                @include mobs {
+                    margin-left: 8px;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .highlight {
+            position: relative;
+            vertical-align: baseline;
+
+            &::before {
+                @include pseudo('', 106%, 12px);
+                position: absolute;
+                left: -3%;
+                bottom: -3px;
+                transform: skewX(336deg);
+                background-color: $c-brand-01;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__separator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 16px;
+
+        .dot {
+            $size: 16px;
+
+            width: $size;
+            height: $size;
+            position: relative;
+            top: 4px;
+            font-size: 0;
+            border-radius: 100%;
+            background-color: $c-white;
+            border: 2px solid $c-brand-02;
+            @include shadowSm03;
+
+            &.active {
+                border-color: $c-brand-04;
+                background-color: $c-brand-04;
+            }
+        }
+
+        .confetti {
+            position: relative;
+
+            &__icon {
+                $size: 40px;
+
+                width: $size;
+                height: $size;
+                @include positionCenter;
+                background-size: 100%;
+                background-image: url('./../../assets/images/ico-confetti.svg');
+
+                @include mobs {
+                    $size: 32px;
+
+                    width: $size;
+                    height: $size;
+                }
+            }
+        }
+
+        .line {
+            width: 4px;
+            min-height: 34px;
+            height: calc(100% - 28px);
+            margin-top: 16px;
+            background-color: #f0f2f5;
+            border-radius: 100px;
+
+            &.active {
+                background-color: $c-brand-04;
+            }
+        }
+
+        &.active {
+            .dot,
+            .line {
+                background-color: $c-brand-04;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        max-width: 400px;
+        margin: 40px 0;
+
+        @include mobs {
+            margin: 20px 0;
+        }
+    }
+}

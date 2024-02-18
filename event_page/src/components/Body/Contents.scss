@@ -1,0 +1,15 @@
+@import './../../styles/variables';
+@import './EventInfo';
+@import './Participation';
+
+.contents {
+    &__body {
+        max-width: 830px;
+        margin: 0 auto;
+        padding: 100px 24px;
+
+        @include mobs {
+            padding: 56px 24px;
+        }
+    }
+}

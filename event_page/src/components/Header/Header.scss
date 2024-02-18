@@ -1,0 +1,60 @@
+@import './../../styles/variables';
+
+.contents {
+    &__head {
+        padding: 120px 24px;
+        text-align: center;
+        background-color: $c-primary-dark;
+
+        @include mobs {
+            padding: 56px 24px;
+        }
+    }
+}
+
+.logo {
+    position: relative;
+    display: block;
+    width: 194px;
+    margin: 0 auto;
+
+    &::before {
+        @include pseudo('', 194px, 34px);
+        background-color: $c-white;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    img {
+        mix-blend-mode: color-dodge;
+    }
+}
+
+.txt {
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.5;
+
+    &__title {
+        margin-top: 24px;
+        color: $c-white;
+        font-size: 60px;
+
+        @include mobs {
+            font-size: 34px;
+        }
+    }
+
+    &__sub {
+        margin-top: 32px;
+        color: $c-white;
+        font-size: 36px;
+        line-height: 1.4;
+
+        @include mobs {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    }
+}
